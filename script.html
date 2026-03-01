@@ -1,0 +1,39 @@
+// Create a variable to hold our timer
+var myTimer;
+
+// Function to handle what happens when we click Start
+function startMovement() {
+    document.getElementById("btnStart").disabled = true;
+    document.getElementById("btnStop").disabled = false;
+    document.getElementById("messageArea").innerHTML = "The meme is moving!";
+    moveIt();
+    myTimer = setInterval(moveIt, 1000);
+}
+
+// Function that calculates random numbers and moves the image
+function moveIt() {
+    var img = document.getElementById("memePic");
+    var x = Math.floor(Math.random() * 600);
+    var y = Math.floor(Math.random() * 500);
+    img.style.left = x + "px";
+    img.style.top = y + "px";
+}
+
+// Function to handle what happens when we click Stop
+function stopMovement() {
+    document.getElementById("btnStart").disabled = false;
+    document.getElementById("btnStop").disabled = true;
+    document.getElementById("messageArea").innerHTML = "Movement stopped.";
+    clearInterval(myTimer);
+}
+
+// Wire the form submit button
+document.getElementById("myForm").onsubmit = function(event) {
+    event.preventDefault();
+    startMovement();
+};
+
+// Wire the stop button
+document.getElementById("btnStop").onclick = function() {
+    stopMovement();
+};

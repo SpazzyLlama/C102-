@@ -1,0 +1,38 @@
+body {
+    /* A basic light gray background */
+    background-color: #f0f0f0;
+    /* Standard dark text */
+    color: #333333;
+    /* Use a basic, easy-to-read font */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the message area */
+#messageArea {
+    /* A standard blue color for the text */
+    color: #0056b3; 
+    /* Make the text bigger */
+    font-size: 20px;
+    /* Add space below the message */
+    margin-bottom: 20px;
+}
+
+/* Make the buttons a little easier to click */
+button {
+    /* Add space inside the buttons */
+    padding: 10px;
+    /* Make the button text larger */
+    font-size: 16px;
+}
+
+/* Set up the image so JavaScript can move it */
+#memePic {
+    /* Absolute position is required to move it with top and left */
+    position: absolute;
+    /* Starting position from the top */
+    top: 200px;
+    /* Starting position from the left */
+    left: 200px;
+    /* Round the corners of the image slightly */
+    border-radius: 10px;
+}
